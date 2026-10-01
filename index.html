@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; padding: 20px; }
+        input, select, button { display: block; width: 100%; margin: 10px 0; padding: 10px; }
+        button { background: #000; color: #fff; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Book Your Cut</h1>
+    <!-- This form sends bookings to Formspree -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="tel" name="phone" placeholder="Your Phone Number" required>
+        <select name="service">
+            <option value="Haircut">Haircut</option>
+            <option value="Beard Trim">Beard Trim</option>
+            <option value="Cut & Beard">Cut & Beard</option>
+        </select>
+        <input type="date" name="date" required>
+        <input type="time" name="time" required>
+        <button type="submit">Book Appointment</button>
+    </form>
+</body>
+</html>
